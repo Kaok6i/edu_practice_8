@@ -1,0 +1,62 @@
+﻿<Window x:Class="LangSchool.pages.ServicesAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LangSchool.pages"
+        mc:Ignorable="d"
+       Title="Языковая школа - добавление" Height="550" Width="400" FontFamily="Comic Sans MS"
+            Icon="res/school_logo.ico" WindowStartupLocation="CenterScreen"
+            MaxHeight="550" MaxWidth="400" MinHeight="550" MinWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel>
+                <TextBlock Text="Наименование услуги" Margin="10 10 0 0" FontSize="13"/>
+                <TextBox x:Name="tbTitle" Margin="10 5 10 0" FontSize="13" Height="25"
+                         BorderBrush="#FF04A0FF"/>
+
+                <TextBlock Text="Стоимость" Margin="10 10 0 0" FontSize="13"/>
+                <TextBox x:Name="tbCost" Margin="10 5 10 0" FontSize="13" Height="25"
+                         KeyDown="tbDuration_KeyDown" PreviewKeyDown="tbDuration_PreviewKeyDown"
+                         BorderBrush="#FF04A0FF"/>
+
+                <TextBlock Text="Продолжительность (в мин.)" Margin="10 10 0 0" FontSize="13"/>
+                <TextBox x:Name="tbDuration" Margin="10 5 10 0" FontSize="13" Height="25"
+                          KeyDown="tbDuration_KeyDown" PreviewKeyDown="tbDuration_PreviewKeyDown"
+                         BorderBrush="#FF04A0FF"/>
+
+                <TextBlock Text="Описание" Margin="10 10 0 0" FontSize="13"/>
+                <TextBox x:Name="tbDescription" Margin="10 5 10 0" FontSize="13" Height="25"
+                         BorderBrush="#FF04A0FF"/>
+
+                <TextBlock Text="Скидка" Margin="10 10 0 0" FontSize="13"/>
+                <TextBox x:Name="tbDiscount" Margin="10 5 10 0" FontSize="13" Height="25"
+                         KeyDown="tbDuration_KeyDown" PreviewKeyDown="tbDuration_PreviewKeyDown"
+                         BorderBrush="#FF04A0FF"/>
+
+                <Image x:Name="Images" Margin="0 10 0 0" Width="150" Height="130"/>
+                <Button x:Name="btEdit" Content="Изменить" Margin="0 5 0 0" 
+                        FontSize="13" Height="25" Width="150"
+                        BorderBrush="#FF04A0FF" Background="White"
+                        Click="btEdit_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Add" Width="150" Height="30" Margin="10 0 0 0" Content="Добавить услугу"
+                        BorderBrush="#FF04A0FF" Background="White" HorizontalAlignment="Left"
+                        Click="Add_Click"/>
+
+                <Button x:Name="Exit" Width="150" Height="30" Margin="60 0 0 0" Content="Выход"
+                        BorderBrush="#FF04A0FF" Background="#FFE7FABF"
+                        HorizontalAlignment="Right" Click="Exit_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
